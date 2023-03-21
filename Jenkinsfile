@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'Cut /etc/passwd | grep user'
+        sh 'cut  -d : -f1,3 /etc/passwd > /tmp/users'
       }
     }
 
